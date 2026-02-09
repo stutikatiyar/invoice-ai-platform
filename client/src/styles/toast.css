@@ -1,0 +1,12 @@
+.Toastify__toast {
+  font-size: 14px;
+  border-radius: 8px;
+}
+
+.Toastify__toast--success {
+  background: #22c55e;
+}
+
+.Toastify__toast--error {
+  background: #ef4444;
+}

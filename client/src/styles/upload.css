@@ -1,0 +1,94 @@
+.upload-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(
+    270deg,
+    #6366f1,
+    #8b5cf6,
+    #4f46e5,
+    #7c3aed
+  );
+
+  background-size: 600% 600%;
+  animation: gradientMove 12s ease infinite;
+}
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+.upload-card {
+  width: 350px;
+  padding: 40px;
+  border-radius: 16px;
+
+  background: rgba(255,255,255,0.18);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255,255,255,0.3);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+
+  text-align: center;
+  color: white;
+}
+
+
+.upload-card h2 {
+  margin-bottom: 20px;
+}
+
+
+
+.upload-btn {
+  width: 100%;
+  padding: 12px;
+  background: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.upload-btn:hover {
+  background: #4338ca;
+}
+
+.back-btn {
+  margin-top: 15px;
+  background: transparent;
+  border: none;
+  color: #4f46e5;
+  cursor: pointer;
+  font-size: 14px;
+}
+.drop-zone {
+  border: 2px dashed #aaa;
+  padding: 40px;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: 0.3s;
+  position: relative;
+   border: 2px dashed rgba(255,255,255,0.5);
+  color: white;
+}
+
+.drop-zone.active {
+  border-color: #6366f1;
+  background: rgba(99, 102, 241, 0.1);
+}
+
+.drop-zone input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}

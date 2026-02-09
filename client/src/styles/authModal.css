@@ -1,0 +1,133 @@
+/* ===== Overlay Background ===== */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 999;
+}
+
+/* ===== Modal Container ===== */
+
+.auth-modal {
+  width: 360px;
+  padding: 35px;
+  border-radius: 16px;
+
+  /* Glass effect */
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+
+  position: relative;
+  color: white;
+
+  animation: modalFade 0.3s ease;
+}
+
+/* ===== Modal Animation ===== */
+
+@keyframes modalFade {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Close Button ===== */
+
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+
+  border: none;
+  background: transparent;
+  color: white;
+
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* ===== Modal Title ===== */
+
+.auth-modal h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* ===== Input Fields ===== */
+
+.auth-modal input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.4);
+
+  background: rgba(255,255,255,0.1);
+  color: white;
+
+  outline: none;
+  transition: 0.3s;
+}
+
+.auth-modal input::placeholder {
+  color: rgba(255,255,255,0.7);
+}
+
+.auth-modal input:focus {
+  border-color: #8b5cf6;
+  box-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
+}
+
+/* ===== Submit Button ===== */
+
+.auth-modal button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+
+  border-radius: 8px;
+  border: none;
+
+  background: white;
+  color: #4f46e5;
+
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.auth-modal button[type="submit"]:hover {
+  transform: translateY(-2px);
+}
+
+/* ===== Switch Login/Register Text ===== */
+
+.switch-link {
+  margin-left: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  color: #ddd;
+}
+
+.switch-link:hover {
+  text-decoration: underline;
+}
